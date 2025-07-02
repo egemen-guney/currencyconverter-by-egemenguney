@@ -16,7 +16,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1> Currency Converter by <span id="name-highlight">Egemen Güney</span></h1>
+
+        <!-- CONVERTER FORM -->
+        <form id="converter">
+            <div class="form-group">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" placeholder="Enter amount here" required>
+            </div>
+
+            <div class="form-group">
+                <label for="from">From</label>
+                <select id="from"> <!-- api --> </select>
+            </div>
+
+            <div class="form-group">
+                <label for="to">To</label>
+                <select id="to"> <!-- api --> </select>
+            </div>
+
+            <button type="submit">Convert</button>
+        </form>
+
+        <div id="result"> <!-- conversion result --> </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
