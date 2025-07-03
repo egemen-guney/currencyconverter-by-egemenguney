@@ -88,6 +88,21 @@ input:focus, select:focus {
     color: var(--text-color);
 }
 
+.switch {
+    text-align: center;
+    margin-top: 14px;
+}
+
+#switch-button {
+    cursor: pointer;
+    color: var(--text-color);
+    transition: all 0.4s ease;
+}
+
+#switch-button:hover {
+    transform: rotate(180deg);
+}
+
 button {
     width: 100%;
     margin-top: 16px;
