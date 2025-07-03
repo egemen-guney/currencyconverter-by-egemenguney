@@ -94,12 +94,19 @@ input:focus, select:focus {
 }
 
 #switch-button {
+    border-radius: 20px;
+    transform: rotate(0deg);
     cursor: pointer;
     color: var(--text-color);
-    transition: all 0.4s ease;
+    transition: transform 0.45s ease, background-color 0.6s ease;
+    padding: 6px;
 }
 
 #switch-button:hover {
+    background-color: #ddd;
+}
+
+#switch-button.clicked {
     transform: rotate(180deg);
 }
 
