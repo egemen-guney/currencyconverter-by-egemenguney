@@ -3,10 +3,12 @@ const amountInput = document.getElementById("amount");
 const from = document.getElementById("from");
 const to = document.getElementById("to");
 const result = document.getElementById("result");
+const swapButton = document.getElementById("switch-button");
 
 // LISTENERS
 window.addEventListener("load", fetchCurrency);
 converter.addEventListener("submit", convert);
+swapButton.addEventListener("click", swapCurrencies);
 
 // FUNC.S
 async function fetchCurrency() {
@@ -50,4 +52,19 @@ async function convert(event) {
     const conversion = (amount * rate).toFixed(2);
 
     result.textContent = `${amount} ${fromVal} = ${conversion} ${toVal}`;
+}
+
+function swapCurrencies() {
+    const temp = from.value;
+    from.value = to.value;
+    to.value = temp;
+
+    if (amountInput.value !== "") {
+        convert(new Event("submit"));
+    }
+
+    swapButton.classList.add("clicked");
+    setTimeout(() => {
+        swapButton.classList.remove("clicked");
+    }, 500);
 }
