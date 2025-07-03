@@ -29,7 +29,8 @@ body {
 .container {
     width: 100%;
     max-width: 400px;
-    background-color: var(--tertiary-bg);
+    /* background-color: var(--tertiary-bg); */
+    background-color: #cececedd;
     padding: 20px;
     border-radius: 16px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
@@ -39,6 +40,25 @@ h1 {
     text-align: center;
     color: var(--text-color);
     margin-bottom: 20px;
+    position: relative;
+    font-size: 1.75rem;
+    padding-bottom: 12px;
+}
+
+#name-highlight {
+    color: black;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 67%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-bg), var(--secondary-bg));
+    border-radius: 3px;
 }
 
 .form-group {
